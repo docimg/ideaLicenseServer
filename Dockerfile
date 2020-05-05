@@ -7,7 +7,8 @@ LABEL maintainer="909712710@qq.com"
 COPY IntelliJIDEALicenseServer /home
 
 RUN chmod +x /home/start.sh && \
-    chmod +x /home/stop.sh
+    chmod +x /home/stop.sh && \
+	chmod +x /home/IntelliJIDEALicenseServer_linux_amd64
 
 WORKDIR /home
 
