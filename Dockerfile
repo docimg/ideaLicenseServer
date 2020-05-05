@@ -4,9 +4,13 @@ LABEL Organization="docimg" Author="hdxw <909712710@qq.com>"
 
 LABEL maintainer="909712710@qq.com"
 
-COPY IntelliJIDEALicenseServer /tmp/
+COPY IntelliJIDEALicenseServer /home
 
-RUN chmod +x /tmp/start.sh && \
-    chmod +x /tmp/stop.sh
+RUN chmod +x /home/start.sh && \
+    chmod +x /home/stop.sh
 
-CMD sh /tmp/start.sh && tail -F /dev/null
+WORKDIR /home
+
+EXPOSE 1024
+
+CMD sh /home/start.sh && tail -F /dev/null
