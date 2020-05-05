@@ -9,3 +9,4 @@ COPY IntelliJIDEALicenseServer /tmp/
 RUN chmod +x /tmp/start.sh && \
     chmod +x /tmp/stop.sh
 
+CMD sh /tmp/start.sh && tail -F /dev/null
