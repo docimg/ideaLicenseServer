@@ -9,4 +9,4 @@ COPY IntelliJIDEALicenseServer /tmp/
 RUN chmod +x /tmp/start.sh && \
     chmod +x /tmp/stop.sh
 
-CMD ["/bin/bash","-c","/tmp/start.sh"]
+CMD /tmp/start.sh
