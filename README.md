@@ -10,5 +10,6 @@ git clone https://github.com/docimg/ideaLicenseServer.git
 docker build -t docimg/ideaserver:v1.0 .
 docker stop ideaserver && docker rm ideaserver
 docker run -d --name ideaserver -p 1024:1024 docimg/ideaserver:v1.0
+docker push docimg/ideaserver:v1.0
 ```
 
